@@ -1,0 +1,10 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno con credenciales (no subir al repositorio)
+.env
+
+# Logs y archivos del sistema
+*.log
+npm-debug.log*
+.DS_Store
