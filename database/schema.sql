@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS notes_api;
+CREATE DATABASE notes_api;
+USE notes_api;
+
+-- Crear la tabla de notas
+CREATE TABLE IF NOT EXISTS notas (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(60) NOT NULL,
+    contenido VARCHAR(280) NOT NULL,
+    categoria ENUM('clase', 'tarea', 'idea') NOT NULL,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+);
